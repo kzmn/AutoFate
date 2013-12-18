@@ -1,16 +1,41 @@
 AutoFate
 ========
 
-A set of web based tools for the Fate Core RPG system.
+A set of web based tools for the Fate Core RPG system built on top of Angular.js and Django.
 
+The web service is hosted at api/.
 
 In order to get started:
 ------------------------
 
-### Install the Dependencies: ###
+### Requirements ###
+- Python 3.3
+- pip
+- virtualenv
 
-	$ cd <root of the project>; npm install
+### Setting up the virtual environment ###
+On Windows run in cmd:
 
-### Run the Server: ###
+	cd <project root directory>
+	virtualenv env
+	env\Scripts\activate
+	pip install requirements.txt
 
-	$ node app
+On Linux:
+
+	cd <project root directory>
+	virtualenv env
+	source env/bin/activate
+	pip install requirements.txt
+
+### Setting up the database ###
+
+	manage.py syncdb
+
+### Running the development server ###
+
+	manage.py runserver
+
+### Exiting the virtual environment ###
+
+	deactivate
