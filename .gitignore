@@ -2,5 +2,6 @@ __pycache__
 *.suo
 *.user
 /env
+/node_modules
 
 *.sqlite3
