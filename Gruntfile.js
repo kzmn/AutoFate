@@ -14,35 +14,39 @@ module.exports = function(grunt) {
       }
     },
 
+
     less: {
       development: {
         options: {
-          paths: ["static/css"]
+          paths: [".static/css"],
+          compress: true,
+          yuicompress: true,
+          optimization: 2
         },
         files: {
-          "style.css": "less/style.less"
+          // target.css file: source.less file
+          "./static/css/style.css": "./static/css/less/style.less"
         }
-      },
-      production: {
+     }
+    },
+
+    watch: {
+      styles: {
+        // Which files to watch (all .less files recursively in the less directory)
+        files: ['./static/css/less//**/*.less'],
+        tasks: ['less'],
         options: {
-          paths: ["static/css"],
-          cleancss: true
-        },
-        files: {
-          "style.css": "less/style.less"
+          nospawn: true
         }
       }
     }
+    });
 
-  });
-
-  // Load the plugin that provides the "uglify" task.
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-less');
+  grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-contrib-jade');
 
-  // Default task(s).
-  grunt.registerTask('default', ['uglify']);
-  grunt.registerTask('less', ['less']);
+  grunt.registerTask('default', ['watch']);
 
 };
