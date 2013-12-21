@@ -3,5 +3,6 @@ __pycache__
 *.user
 /env
 /node_modules
+/.idea
 
 *.sqlite3
