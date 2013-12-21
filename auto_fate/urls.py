@@ -1,15 +1,15 @@
 from django.conf.urls import patterns, include, url
 from rest_framework import routers
-from fate_core import views as core_views
+from fate_game import views as game_views
+from fate_skill import views as skill_views
 from fate_character import views as character_views
+from fate_aspect import views as aspect_views
 
 router = routers.DefaultRouter()
-router.register(r'games', core_views.GameViewSet)
-router.register(r'issues', core_views.IssueViewSet)
-router.register(r'faces', core_views.FaceViewSet)
-router.register(r'places', core_views.PlaceViewSet)
-router.register(r'skills', core_views.SkillViewSet)
+router.register(r'games', game_views.GameViewSet)
+router.register(r'skills', skill_views.SkillViewSet)
 router.register(r'characters', character_views.CharacterViewSet)
+router.register(r'aspects', aspect_views.AspectViewSet)
 
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browseable API.
