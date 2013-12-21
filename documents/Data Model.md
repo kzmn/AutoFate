@@ -4,9 +4,10 @@
 1. Name - text
 2. Setting - text
 3. Issues - list of text
-4. Faces - Character
+4. Faces and Places - list of Character
 5. Dials - see sheet
 6. Skills - list of Skill
+7. Player Characters - list of Character
 
 ###Skill
 1. Name - text
