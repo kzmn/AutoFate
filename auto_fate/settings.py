@@ -37,8 +37,10 @@ INSTALLED_APPS = (
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'fate_core',
-    'fate_character'
+    'fate_character',
+    'fate_aspect',
+    'fate_game',
+    'fate_skill'
 )
 
 MIDDLEWARE_CLASSES = (
