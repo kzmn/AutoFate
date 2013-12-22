@@ -30,17 +30,41 @@
     <Compile Include="auto_fate\urls.py" />
     <Compile Include="auto_fate\wsgi.py" />
     <Compile Include="auto_fate\__init__.py" />
-    <Compile Include="fate_core\admin.py" />
-    <Compile Include="fate_core\models.py" />
-    <Compile Include="fate_core\serializers.py" />
-    <Compile Include="fate_core\tests.py" />
-    <Compile Include="fate_core\views.py" />
-    <Compile Include="fate_core\__init__.py" />
+    <Compile Include="fate_aspect\admin.py" />
+    <Compile Include="fate_aspect\models.py" />
+    <Compile Include="fate_aspect\tests.py" />
+    <Compile Include="fate_aspect\views.py" />
+    <Compile Include="fate_aspect\__init__.py" />
+    <Compile Include="fate_character\admin.py" />
+    <Compile Include="fate_character\models.py" />
+    <Compile Include="fate_character\tests.py" />
+    <Compile Include="fate_character\views.py" />
+    <Compile Include="fate_character\__init__.py" />
+    <Compile Include="fate_game\admin.py" />
+    <Compile Include="fate_game\models.py" />
+    <Compile Include="fate_game\tests.py" />
+    <Compile Include="fate_game\views.py" />
+    <Compile Include="fate_game\__init__.py" />
+    <Compile Include="fate_skill\admin.py" />
+    <Compile Include="fate_skill\models.py" />
+    <Compile Include="fate_skill\tests.py" />
+    <Compile Include="fate_skill\views.py" />
+    <Compile Include="fate_skill\__init__.py" />
     <Compile Include="manage.py" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="auto_fate\" />
-    <Folder Include="fate_core\" />
+    <Folder Include="documents\" />
+    <Folder Include="fate_aspect\" />
+    <Folder Include="fate_character\" />
+    <Folder Include="fate_game\" />
+    <Folder Include="fate_skill\" />
+    <Folder Include="src\" />
+    <Folder Include="src\less\" />
+    <Folder Include="src\less\bootstrap\" />
+    <Folder Include="static\" />
+    <Folder Include="static\js\" />
+    <Folder Include="static\js\lib\" />
   </ItemGroup>
   <ItemGroup>
     <InterpreterReference Include="{9a7a9026-48c1-4688-9d5d-e5699d47d074}\3.3" />
@@ -56,6 +80,53 @@
       <LibraryPath>Lib\</LibraryPath>
       <PathEnvironmentVariable>PYTHONPATH</PathEnvironmentVariable>
     </Interpreter>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="documents\Data Model.md" />
+    <Content Include="src\less\.DS_Store" />
+    <Content Include="src\less\bootstrap\alerts.less" />
+    <Content Include="src\less\bootstrap\badges.less" />
+    <Content Include="src\less\bootstrap\bootstrap.less" />
+    <Content Include="src\less\bootstrap\breadcrumbs.less" />
+    <Content Include="src\less\bootstrap\button-groups.less" />
+    <Content Include="src\less\bootstrap\buttons.less" />
+    <Content Include="src\less\bootstrap\carousel.less" />
+    <Content Include="src\less\bootstrap\close.less" />
+    <Content Include="src\less\bootstrap\code.less" />
+    <Content Include="src\less\bootstrap\component-animations.less" />
+    <Content Include="src\less\bootstrap\dropdowns.less" />
+    <Content Include="src\less\bootstrap\forms.less" />
+    <Content Include="src\less\bootstrap\glyphicons.less" />
+    <Content Include="src\less\bootstrap\grid.less" />
+    <Content Include="src\less\bootstrap\input-groups.less" />
+    <Content Include="src\less\bootstrap\jumbotron.less" />
+    <Content Include="src\less\bootstrap\labels.less" />
+    <Content Include="src\less\bootstrap\list-group.less" />
+    <Content Include="src\less\bootstrap\media.less" />
+    <Content Include="src\less\bootstrap\mixins.less" />
+    <Content Include="src\less\bootstrap\modals.less" />
+    <Content Include="src\less\bootstrap\navbar.less" />
+    <Content Include="src\less\bootstrap\navs.less" />
+    <Content Include="src\less\bootstrap\normalize.less" />
+    <Content Include="src\less\bootstrap\pager.less" />
+    <Content Include="src\less\bootstrap\pagination.less" />
+    <Content Include="src\less\bootstrap\panels.less" />
+    <Content Include="src\less\bootstrap\popovers.less" />
+    <Content Include="src\less\bootstrap\print.less" />
+    <Content Include="src\less\bootstrap\progress-bars.less" />
+    <Content Include="src\less\bootstrap\responsive-utilities.less" />
+    <Content Include="src\less\bootstrap\scaffolding.less" />
+    <Content Include="src\less\bootstrap\tables.less" />
+    <Content Include="src\less\bootstrap\theme.less" />
+    <Content Include="src\less\bootstrap\thumbnails.less" />
+    <Content Include="src\less\bootstrap\tooltip.less" />
+    <Content Include="src\less\bootstrap\type.less" />
+    <Content Include="src\less\bootstrap\utilities.less" />
+    <Content Include="src\less\bootstrap\variables.less" />
+    <Content Include="src\less\bootstrap\wells.less" />
+    <Content Include="src\less\style.less" />
+    <Content Include="static\js\lib\angular.min.js" />
+    <Content Include="static\js\lib\bootstrap.min.js" />
   </ItemGroup>
   <Import Project="$(VSToolsPath)\Python Tools\Microsoft.PythonTools.Django.targets" />
   <ProjectExtensions>
