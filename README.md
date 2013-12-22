@@ -12,6 +12,7 @@ In order to get started:
 - Python 3.3
 - pip
 - virtualenv
+- node js
 
 ### Setting up the virtual environment ###
 On Windows run in cmd:
@@ -39,3 +40,15 @@ On Linux:
 ### Exiting the virtual environment ###
 
 	deactivate
+
+### Setting Retrieving Node Libraries###
+
+    npm install
+
+### Using grunt ###
+
+Simply type grunt <commandName> into the console window for the command that you
+want to run.  The grunt default will start the watcher that currently watches
+less files and compiles them to css.  example:
+
+    grunt less
