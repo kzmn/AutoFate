@@ -57,8 +57,8 @@ module.exports = function(grunt) {
     watch: {
       styles: {
         // Which files to watch (all .less files recursively in the less directory)
-        files: ['./src/less//**/*.less'],
-        tasks: ['less'],
+        files: ['./src/less//**/*.less', './src/templates//**/*.jade'],
+        tasks: ['less:development', 'jade:development'],
         options: {
           nospawn: true
         }
