@@ -1,4 +1,5 @@
-module.exports = function(grunt) {
+module.exports = function (grunt)
+{
 
   // Project configuration.
   grunt.initConfig({
@@ -27,19 +28,19 @@ module.exports = function(grunt) {
           // target.css file: source.less file
           "./static/css/style.css": "./src/less/style.less"
         }
-     },
-    release: {
-      options: {
-        paths: [".static/css"],
-        compress: true,
-        yuicompress: true,
-        optimization: 2
       },
-      files: {
-        // target.css file: source.less file
-        "./static/css/style.css": "./src/less/style.less"
+      release: {
+        options: {
+          paths: [".static/css"],
+          compress: true,
+          yuicompress: true,
+          optimization: 2
+        },
+        files: {
+          // target.css file: source.less file
+          "./static/css/style.css": "./src/less/style.less"
+        }
       }
-   }
     },
 
     jade: {
@@ -76,7 +77,7 @@ module.exports = function(grunt) {
         }
       }
     }
-    });
+  });
 
   grunt.loadNpmTasks('grunt-contrib-uglify');
   grunt.loadNpmTasks('grunt-contrib-less');
