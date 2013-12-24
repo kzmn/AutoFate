@@ -9,10 +9,11 @@ In order to get started:
 ------------------------
 
 ### Requirements ###
-- Python 3.3
-- pip
-- virtualenv
-- node js
+- [Python 3.3](http://www.python.org/download/)
+- [pip](http://www.pip-installer.org/en/latest/installing.html)
+- [virtualenv](http://www.virtualenv.org/en/latest/virtualenv.html#installation)
+- [node.js](http://nodejs.org/download/)
+- [grunt-cli](http://gruntjs.com/getting-started)
 
 ### Setting up the virtual environment ###
 On Windows run in cmd:
@@ -41,7 +42,7 @@ On Linux:
 
 	deactivate
 
-### Setting Retrieving Node Libraries###
+### Setting Retrieving Node Libraries ###
 
     npm install
 
