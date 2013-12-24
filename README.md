@@ -52,4 +52,4 @@ Simply type grunt <commandName> into the console window for the command that you
 want to run.  The grunt default will start the watcher that currently watches
 less files and compiles them to css.  example:
 
-    grunt less
+    grunt less:development
