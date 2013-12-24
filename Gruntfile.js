@@ -19,15 +19,27 @@ module.exports = function(grunt) {
       development: {
         options: {
           paths: [".static/css"],
-          compress: true,
-          yuicompress: true,
+          compress: false,
+          yuicompress: false,
           optimization: 2
         },
         files: {
           // target.css file: source.less file
           "./static/css/style.css": "./src/less/style.less"
         }
-     }
+     },
+    release: {
+      options: {
+        paths: [".static/css"],
+        compress: true,
+        yuicompress: true,
+        optimization: 2
+      },
+      files: {
+        // target.css file: source.less file
+        "./static/css/style.css": "./src/less/style.less"
+      }
+   }
     },
 
     jade: {
