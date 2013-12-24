@@ -30,6 +30,30 @@ module.exports = function(grunt) {
      }
     },
 
+    jade: {
+      development: {
+        options: {
+          data: {
+            debug: true
+          },
+          pretty: true
+        },
+        files: {
+          "./static/index.html": "./src/templates/index.jade"
+        }
+      },
+      release: {
+        options: {
+          data: {
+            debug: false
+          }
+        },
+        files: {
+          "./static/index.html": "./src/templates/index.jade"
+        }
+      }
+    },
+
     watch: {
       styles: {
         // Which files to watch (all .less files recursively in the less directory)
