@@ -28,6 +28,7 @@
   <ItemGroup>
     <Compile Include="auto_fate\settings.py" />
     <Compile Include="auto_fate\urls.py" />
+    <Compile Include="auto_fate\views.py" />
     <Compile Include="auto_fate\wsgi.py" />
     <Compile Include="auto_fate\__init__.py" />
     <Compile Include="fate_aspect\admin.py" />
@@ -54,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="auto_fate\" />
+    <Folder Include="auto_fate\templates\" />
     <Folder Include="documents\" />
     <Folder Include="fate_aspect\" />
     <Folder Include="fate_character\" />
@@ -82,6 +84,7 @@
     </Interpreter>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="auto_fate\templates\base_site.jade" />
     <Content Include="documents\Data Model.md" />
     <Content Include="src\less\.DS_Store" />
     <Content Include="src\less\bootstrap\alerts.less" />

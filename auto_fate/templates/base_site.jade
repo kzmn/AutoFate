@@ -1,13 +1,14 @@
+| {% load static from staticfiles %}
+
 doctype 5
 html
   head
     title= title
     meta(name="viewport", content="width=device-width, initial-scale=1.0")
-    link(rel='stylesheet', href='/static/css/style.css')
+    link(rel='stylesheet', href='{% static "css/style.css" %}')
   body
 
     section#main
 
       footer
         p.span12 &copy; Auto Fate Team
-                                  

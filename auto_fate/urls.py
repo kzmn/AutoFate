@@ -14,6 +14,7 @@ router.register(r'aspects', aspect_views.AspectViewSet)
 # Wire up our API using automatic URL routing.
 # Additionally, we include login URLs for the browseable API.
 urlpatterns = patterns('',
+    url(r'^$', 'auto_fate.views.root_view'),
     url(r'^api/', include(router.urls)),
     url(r'^api-auth/', include('rest_framework.urls', namespace='rest_framework'))
 )
