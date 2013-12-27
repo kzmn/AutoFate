@@ -33,7 +33,7 @@ class DiceRoller():
         """
         random.seed()
         results = []
-        for key in dicedict.keys():
+        for key in sorted(dicedict.keys()):
             [results.append(random.randrange(1, key, 1)) for _ in
              range(dicedict[key])]
         return results
