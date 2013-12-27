@@ -73,7 +73,10 @@ class TestDiceRoller(TestCase):
         Tests that the dice roller handles the rolling of an arbitrary number
         of fudge dice correctly.
         """
-
+        # TODO: look into passing in specific results from the roll_dice method
+        # to test that the fudge dice method is translating to fudge properly
+        # (will likely require some kind of method stubbing if python supports
+        # that.
         for _ in range(100):
             numdice = random.randint(1, 50)
             results = self.roller.roll_fudge_dice(numdice)
