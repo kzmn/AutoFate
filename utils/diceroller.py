@@ -25,7 +25,15 @@ class DiceRoller():
 
     def roll_dice(self, dicedict):
         """
-        Rolls a set of polyhedral dice and returns a list of the results
+        Rolls a set of polyhedral dice and returns a list of the results.  The
+        results list will return with the results of lower sided dice at the
+        beginning of the list and the results of higer sided dice at the end
+        of the list.
+
+        For example, if we roll {8: 3, 20: 2, 6: 4, 10: 5} the
+        results list would look like: (d6, d6, d6, d6, d8, d8, d8, d10, d10,
+        d10, d10, d10, d20, d20)
+
         :param self: the self parameter
         :param dicedict:  A diction of dice, the key is the number of
         sides to the die, the value is the number of dice of that type to roll.
@@ -33,6 +41,11 @@ class DiceRoller():
         """
         random.seed()
         results = []
+        # Roll each die indicated by the dice dict and put the result of the
+        # roll into the results list.  We are sorting the keys of the dice
+        # dictionary in order to ensure a predictable output for dice rolls
+        # as python dictionaries have random order regardless of what order
+        # keys were entered in.
         for key in sorted(dicedict.keys()):
             [results.append(random.randrange(1, key, 1)) for _ in
              range(dicedict[key])]
