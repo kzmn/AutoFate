@@ -53,3 +53,7 @@ want to run.  The grunt default will start the watcher that currently watches
 less files and compiles them to css.  example:
 
     grunt less:development
+
+### Running tests ###
+
+    python3 manage.py test
