@@ -16,7 +16,7 @@ class TestDiceRoller(TestCase):
             # test the simple case of rolling 4d6
             # TODO: If we update to 3.4 at some point, update to use subtests.
             # with self.subTest():
-            results = self.roller.rolldice({6: 4})
+            results = self.roller.roll_dice({6: 4})
             self.assertTrue(len(list(filter(lambda x: x <= 0, results))) == 0)
             self.assertTrue(len(list(filter(lambda x: x > 6, results))) == 0)
             self.assertTrue(
@@ -24,7 +24,7 @@ class TestDiceRoller(TestCase):
 
             # test more complicated case involving multiple types of dice
             # rolls 2d20 + 27d10 + 3d8 + 4d6
-            results = self.roller.rolldice({6: 4, 8: 3, 10: 27, 20: 2})
+            results = self.roller.roll_dice({6: 4, 8: 3, 10: 27, 20: 2})
             # no roll should be less than or equal to 0 regardless of dice type.
             self.assertTrue(len(list(filter(lambda x: x <= 0, results))) == 0)
 

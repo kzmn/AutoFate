@@ -23,7 +23,7 @@ class DiceRoller():
     as fudge dice.
     """
 
-    def rolldice(self, dicedict):
+    def roll_dice(self, dicedict):
         """
         Rolls a set of polyhedral dice and returns a list of the results
         :param self: the self parameter
@@ -38,18 +38,18 @@ class DiceRoller():
              range(dicedict[key])]
         return results
 
-    def roll4dfudge(self):
+    def roll_4dfudge(self):
         """
         Rolls 4 fudge dice and returns a list of the results.
         :rtype : (string)
         """
-        return self.rollfudgedice(4)
+        return self.roll_fudge_dice(4)
 
 
-    def rollfudgedice(self, count):
+    def roll_fudge_dice(self, count):
         """
         Rolls a given number of fudge dice.
         :param count: the number of dice to roll.
         """
-        numericrolls = self.rolldice({6: count})
+        numericrolls = self.roll_dice({6: count})
         return list(map(__convertd6todf__, numericrolls))
