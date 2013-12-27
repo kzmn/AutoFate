@@ -27,6 +27,29 @@ class TestDiceRoller(TestCase):
             results = self.roller.rolldice({6: 4, 8: 3, 10: 27, 20: 2})
             # no roll should be less than or equal to 0 regardless of dice type.
             self.assertTrue(self.assertTrue(len(filter(lambda x: x <= 0, results)) == 0))
+
+            # set up the sub-lists for each die type.
             d6rolls = results[0:3]
+            d8rolls = results[4:6]
+            d10rolls = results[7:34]
+            d20rolls = results[35:37]
+
+            # test the d6 rolls
+            self.assertTrue(len(filter(lambda x: x >= 6, d6rolls)) == 0)
+            self.assertTrue(len(filter(lambda x: 0 < x <= 6, d6rolls)) == 4)
+
+            # test the d8 rolls
+            self.assertTrue(len(filter(lambda x: x >= 8, d8rolls)) == 0)
+            self.assertTrue(len(filter(lambda x: 0 < x <= 8, d8rolls)) == 3)
+
+            # test the d10 rolls
+            self.assertTrue(len(filter(lambda x: x >= 10, d10rolls)) == 0)
+            self.assertTrue(len(filter(lambda x: 0 < x <= 10, d10rolls)) == 27)
+
+            # test the d20 rolls
+            self.assertTrue(len(filter(lambda x: x >= 10, d20rolls)) == 0)
+            self.assertTrue(len(filter(lambda x: 0 < x <= 10, d20rolls)) == 2)
+
+
 
 
