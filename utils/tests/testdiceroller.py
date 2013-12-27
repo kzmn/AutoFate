@@ -1,18 +1,31 @@
 from django.test import TestCase
 from utils.diceroller import DiceRoller
+import random
+
+
+def __is_valid_fate_roll__(roll):
+    if roll == "+" or "-" or " ":
+        return True
+    else:
+        return False
 
 
 class TestDiceRoller(TestCase):
+    """
+    Test cases for the DiceRoller class.
+    """
+
     def setUp(self):
         self.roller = DiceRoller()
+        random.seed()
 
     def test_roll_dice(self):
         """
         Tests that the dice roller works as intended.  Do to the random nature
-        of dice rolls the tests are repeated 1000 times to make sure we have
+        of dice rolls the tests are repeated 100 times to make sure we have
         a decent set of test data.
         """
-        for _ in range(1000):
+        for _ in range(100):
             # test the simple case of rolling 4d6
             # TODO: If we update to 3.4 at some point, update to use subtests.
             # with self.subTest():
@@ -53,3 +66,29 @@ class TestDiceRoller(TestCase):
             self.assertTrue(len(list(filter(lambda x: x > 20, d20rolls))) == 0)
             self.assertTrue(
                 len(list(filter(lambda x: 0 < x <= 20, d20rolls))) == 2)
+
+
+    def test_roll_fudge_dice(self):
+        """
+        Tests that the dice roller handles the rolling of an arbitrary number
+        of fudge dice correctly.
+        """
+
+        for _ in range(100):
+            numdice = random.randint(1, 50)
+            results = self.roller.roll_fudge_dice(numdice)
+            self.assertTrue(
+                len(list(filter(__is_valid_fate_roll__, results))) == numdice)
+
+
+    def test_roll_4dfudge(self):
+        """
+        Tests that the dice roller rolls 4dfudge correctly
+        """
+        for _ in range(100):
+            results = self.roller.roll_4dfudge()
+            self.assertTrue(
+                len(list(filter(__is_valid_fate_roll__, results))) == 4)
+
+
+
