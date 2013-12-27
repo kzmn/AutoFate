@@ -1,7 +1,11 @@
 import random
 
+# TODO: Consider replacing d6 roll with d3 roll since that's all we really need
+# since we are not working with real dice.
 
-def __convertd6todf__(d6roll):
+# TODO: Consider representing fudge dice with -1, 0, and 1 instead of string
+# "-", " ", and "+"
+def __convert_d6_to_df__(d6roll):
     """
     Converts the numeric value of a d6 roll into the "-" " " or "+"
     values on fudge dice
@@ -63,6 +67,7 @@ class DiceRoller():
         """
         Rolls a given number of fudge dice.
         :param count: the number of dice to roll.
+        :rtype : (string)
         """
         numericrolls = self.roll_dice({6: count})
-        return list(map(__convertd6todf__, numericrolls))
+        return list(map(__convert_d6_to_df__, numericrolls))
