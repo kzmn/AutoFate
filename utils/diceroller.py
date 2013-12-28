@@ -5,6 +5,7 @@ import random
 
 # TODO: Consider representing fudge dice with -1, 0, and 1 instead of string
 # "-", " ", and "+"
+
 def __convert_d6_to_df__(d6roll):
     """
     Converts the numeric value of a d6 roll into the "-" " " or "+"
