@@ -1,6 +1,7 @@
 __pycache__
 *.suo
 *.user
+*.iml
 /env
 /node_modules
 /.idea
