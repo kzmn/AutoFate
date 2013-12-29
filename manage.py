@@ -4,6 +4,7 @@ import sys
 
 if __name__ == "__main__":
     os.environ.setdefault("DJANGO_SETTINGS_MODULE", "auto_fate.settings")
+    os.environ.__setitem__("DJANGO_SETTINGS_MODULE", "auto_fate.settings_dev")
 
     from django.core.management import execute_from_command_line
 
