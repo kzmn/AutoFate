@@ -1,11 +1,9 @@
 from django.db import models
-from fate_game.models import Game
 from fate_aspect.models import Aspect
+from fate_game.models import Game
 
-# Create your models here.
 
 class Character(models.Model):
-    game = models.ForeignKey(Game)
     name = models.CharField(max_length=128)
     description = models.TextField()
     refresh = models.IntegerField()
@@ -13,3 +11,11 @@ class Character(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class PlayerCharacter(Character):
+    game = models.ForeignKey(Game, related_name='player_characters')
+
+
+class FaceOrPlaceCharacter(Character):
+    game = models.ForeignKey(Game, related_name='faces_and_places')

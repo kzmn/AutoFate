@@ -9,6 +9,8 @@ router = routers.DefaultRouter()
 router.register(r'games', game_views.GameViewSet)
 router.register(r'skills', skill_views.SkillViewSet)
 router.register(r'characters', character_views.CharacterViewSet)
+router.register(r'player-characters', character_views.PlayerCharacterViewSet)
+router.register(r'faces-and-places', character_views.FaceOrPlaceCharacterViewSet)
 router.register(r'aspects', aspect_views.AspectViewSet)
 
 # Wire up our API using automatic URL routing.

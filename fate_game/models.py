@@ -1,5 +1,6 @@
 from django.db import models
 
+
 class Game(models.Model):
     name = models.CharField(max_length=128)
     setting = models.CharField(max_length=128)
@@ -17,7 +18,15 @@ class Game(models.Model):
     number_of_stress_boxes = models.IntegerField(default=2)
     ## TODO: Consequence slots
 
-
     def __str__(self):
         return self.name
+
+
+class Issues(models.Model):
+    description = models.TextField()
+    game = models.OneToOneField(Game)
+
+
+
+
 
